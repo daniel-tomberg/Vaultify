@@ -1,0 +1,4 @@
+{
+  "serverPort" : 5003,
+  "dbUrl": "mongodb+srv://YOUR_USER:YOUR_PASSWORD@cloud.obqrc.mongodb.net/?retryWrites=true&w=majority&appName=cloud"
+}
