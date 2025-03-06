@@ -1,5 +1,5 @@
 {
   "serverPort" : 5003,
-  "dbUrl": "URL",
+  "dbUrl": "mongodb+srv://tommberg:LYJS5w0X07gPZJfR@cloud.obqrc.mongodb.net/?retryWrites=true&w=majority&appName=cloud",
   "secretKey": "vaultify-secret-key"
 }

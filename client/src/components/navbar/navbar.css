@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    background-color: #121211;
+    width: 100%;
+    border-bottom: 1px #333333 solid;
+}
+
+.navbar__login {
+    margin-left: auto;
+    margin-right: 20px;
+}
+.container {
+    width: 1140px;
+    display: flex;
+    align-items: center;
+}
+
+/*# sourceMappingURL=navbar.css.map */
