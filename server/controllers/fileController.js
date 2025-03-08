@@ -23,7 +23,7 @@ class FileController {
                 await parentFile.save();
             }
 
-            console.log("Final computed file path:", file.path);
+            console.log("Final computed fileList path:", file.path);
 
             await fileService.createDir(file);
             await file.save();
