@@ -13,10 +13,10 @@ const Navbar = () => {
         <div className="navbar">
             <div className="container">
                 <img src={Logo} alt="" className="navbar__logo"/>
-                {!isAuth && <div className="navbar__login"><NavLink to="/login">Войти</NavLink></div>}
+                {!isAuth && <div className="navbar__login"><NavLink to="/login">Login</NavLink></div>}
                 {!isAuth &&
-                    <div className="navbar__registration"><NavLink to="/registration">Регистрация</NavLink></div>}
-                {isAuth && <div className="navbar__login" onClick={() => dispatch(logout())}>Выход</div>}
+                    <div className="navbar__registration"><NavLink to="/registration">Registration</NavLink></div>}
+                {isAuth && <div className="navbar__login" onClick={() => dispatch(logout())}>Logout</div>}
             </div>
         </div>
     );
