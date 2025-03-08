@@ -12,7 +12,7 @@ const Registration = () => {
             <div className="authorization__header">Registration</div>
             <Input value={email} setValue={setEmail} type="text" placeholder="Enter email..."/>
             <Input value={password} setValue={setPassword} type="password" placeholder="Enter password..."/>
-            <button className="authorization__btn" onClick={() => registration(email, password)}>Register</button>
+            <button className="authorization__btn" onClick={() => registration(email, password)}>Continue</button>
         </div>
     );
 };

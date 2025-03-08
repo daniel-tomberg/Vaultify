@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #566885;
+    font-family: Arial, sans-serif;
 }
 body {
     background-color: #1a1817;
@@ -14,11 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.wrap {
-    width: 1140px;
-    display: flex;
-    flex-direction: column;
 }
 
 /*# sourceMappingURL=app.css.map */

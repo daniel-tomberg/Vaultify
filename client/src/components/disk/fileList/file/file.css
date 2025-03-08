@@ -1,0 +1,35 @@
+.file {
+    padding: 5px 0;
+    border-bottom: solid 1px #3a3939;
+    display: grid;
+    grid-template-columns: 1fr 4fr repeat(4, 1fr);
+    align-items: center;
+}
+
+.filelist__empty {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.file:hover {
+    transform: scale(1.02);
+}
+.file__img {
+    justify-self: center;
+}
+
+.file__name {
+    color: white;
+}
+.file__date {
+    grid-column-start: 5;
+    justify-self: center;
+    color: white;
+}
+.file__size {
+    grid-column-start: 6;
+    justify-self: center;
+    color: white;
+}
+/*# sourceMappingURL=file.css.map */

@@ -19,7 +19,7 @@ class FileService {
                     return reject({ message: `File already exists` });
                 }
             } catch (e) {
-                console.error("Error creating file:", e);
+                console.error("Error creating fileList:", e);
                 return reject({ message: `File error: ${e.message}` });
             }
         });

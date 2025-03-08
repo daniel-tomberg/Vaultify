@@ -10,7 +10,15 @@
 .navbar__login {
     margin-left: auto;
     margin-right: 20px;
+    color: white;
 }
+
+.navbar__login a,
+.navbar__registration a {
+    color: white;
+    text-decoration: none;
+}
+
 .container {
     width: 1140px;
     display: flex;
