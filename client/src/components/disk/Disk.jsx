@@ -1,14 +1,24 @@
-import React from 'react';
-import Folder2 from "../../assets/img/filefolder.svg";
-import File2 from "../../assets/img/file.svg";
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {getFiles} from "../../actions/file";
+import FileList from "./fileList/FileList";
+import './disk.css'
 
 const Disk = () => {
-    return (
-        <div>
-            DISK
-            <img src={Folder2} alt="" className="folder2"/>
-            <img src={File2} alt="" className="file2"/>
+    const dispatch = useDispatch()
+    const currentDir = useSelector(state => state.files.currentDir)
 
+    useEffect(() => {
+        dispatch(getFiles(currentDir))
+    }, [dispatch, currentDir])
+
+    return (
+        <div className="disk">
+            <div className="disk__btns">
+                <button className="disk__back">Back</button>
+                <button className="disk__create">Create Folder</button>
+            </div>
+            <FileList/>
         </div>
     );
 };
