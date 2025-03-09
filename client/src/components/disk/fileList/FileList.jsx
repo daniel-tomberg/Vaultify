@@ -1,13 +1,10 @@
 import React from 'react';
-import './fileList.css'
-import {useSelector} from "react-redux";
-import File from "./file/File";
+import './fileList.css';
+import { useSelector } from 'react-redux';
+import File from './file/File';
 
 const FileList = () => {
-
-    const files = useSelector(state => state.files.files).map(file => (
-        <File key={file.id || file.name} file={file}/>
-    ));
+    const files = useSelector(state => Array.isArray(state.files?.files) ? state.files.files : []);
 
     return (
         <div className='filelist'>
@@ -16,7 +13,14 @@ const FileList = () => {
                 <div className="filelist__date">Date</div>
                 <div className="filelist__size">Size</div>
             </div>
-            {files}
+
+            {files.length > 0 ? (
+                files.map(file => (
+                    <File key={file._id || file.name} file={file} />
+                ))
+            ) : (
+                <div className="filelist__empty">No available files</div>
+            )}
         </div>
     );
 };
