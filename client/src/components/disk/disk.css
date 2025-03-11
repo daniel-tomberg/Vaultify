@@ -1,11 +1,52 @@
+
 .disk {
     margin-top: 20px;
 }
 .disk__btns {
     display: flex;
 }
+
 .disk__create {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #3a3939;
+    border-radius: 12px;
+    padding: 5px 20px;
     margin-left: 10px;
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.disk__create:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.disk__create:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+.disk__back {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #3a3939;
+    border-radius: 12px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .popup {
@@ -39,4 +80,37 @@
 .popup input {
     margin: 20px 0px;
 }
+
+.disk__upload-input {
+    display: none;
+}
+.disk__upload-label {
+    background-color: #f8f5f2;
+    border-radius: 12px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-area {
+    width: 100vw;
+    height: calc(100vh - 90px);
+    margin: 20px 0;
+    border: 10px dashed #3a3939;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+
 /*# sourceMappingURL=disk.css.map */
