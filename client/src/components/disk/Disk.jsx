@@ -62,6 +62,7 @@ const Disk = () => {
                     <button className="disk__back" onClick={() => backClickHandler()}>Back</button>
                     <button className="disk__create" onClick={() => showPopupHandler()}>Create folder</button>
                 </div>
+                <div style={{height: '500px'}}></div>
                 <FileList/>
                 <Popup/>
             </div>

@@ -15,7 +15,13 @@
     justify-self: center;
     color: white;
 }
-.filelist__size {
+/*.filelist__size {*/
+/*    grid-column-start: 6;*/
+/*    justify-self: center;*/
+/*    color: white;*/
+/*}*/
+
+.filelist__access {
     grid-column-start: 6;
     justify-self: center;
     color: white;

@@ -16,7 +16,6 @@ function App() {
         dispatch(auth())
     }, [dispatch])
 
-
     return (
         <BrowserRouter>
             <div className='app'>

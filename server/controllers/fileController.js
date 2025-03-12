@@ -98,6 +98,37 @@ class FileController {
             return res.status(500).json({message: "Upload error"});
         }
     }
+
+    async downloadFile(req, res) {
+        try {
+            console.log("Download request received with ID:", req.query.id);
+            console.log("User ID:", req.user?.id);
+
+            if (!req.query.id) {
+                return res.status(400).json({ message: "Missing file ID in request" });
+            }
+
+            const file = await File.findOne({ _id: req.query.id, user: req.user.id });
+
+            if (!file) {
+                return res.status(404).json({ message: "File not found or access denied" });
+            }
+
+            const filePath = path.join(config.get('filePath'), req.user.id, file.path, file.name);
+
+            console.log("Checking file path:", filePath);
+
+            if (!fs.existsSync(filePath)) {
+                return res.status(404).json({ message: "File does not exist on the server" });
+            }
+
+            console.log("File found, initiating download...");
+            return res.download(filePath, file.name);
+        } catch (e) {
+            console.error("Download error:", e);
+            return res.status(500).json({ message: "Download error" });
+        }
+    }
 }
 
 module.exports = new FileController()

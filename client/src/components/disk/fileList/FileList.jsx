@@ -10,8 +10,9 @@ const FileList = () => {
         <div className='filelist'>
             <div className="filelist__header">
                 <div className="filelist__name">Name</div>
-                <div className="filelist__date">Date</div>
-                <div className="filelist__size">Size</div>
+                <div className="filelist__access">Who can access</div>
+                <div className="filelist__date">Date modified</div>
+                {/*<div className="filelist__size">Size</div>*/}
             </div>
 
             {files.length > 0 ? (
