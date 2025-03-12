@@ -80,11 +80,12 @@ class FileController {
             await file.mv(filePath);
 
             const type = sanitizedFileName.split('.').pop();
+
             const dbFile = new File({
                 name: sanitizedFileName,
                 type,
                 size: file.size,
-                path: parent?.path || "",
+                path: filePath,
                 parent: parent?._id,
                 user: user._id
             });
@@ -114,7 +115,7 @@ class FileController {
                 return res.status(404).json({ message: "File not found or access denied" });
             }
 
-            const filePath = path.join(config.get('filePath'), req.user.id, file.path, file.name);
+            const filePath = file.path
 
             console.log("Checking file path:", filePath);
 
@@ -127,6 +128,21 @@ class FileController {
         } catch (e) {
             console.error("Download error:", e);
             return res.status(500).json({ message: "Download error" });
+        }
+    }
+
+    async deleteFile(req, res) {
+        try {
+            const file = await File.findOne({_id: req.query.id, user: req.user.id})
+            if (!file) {
+                return res.status(400).json({message: 'file not found'})
+            }
+            fileService.deleteFile(file)
+            await file.deleteOne()
+            return res.json({message: 'File was deleted'})
+        } catch (e) {
+            console.log(e)
+            return res.status(400).json({message: 'Dir is not empty'})
         }
     }
 }
