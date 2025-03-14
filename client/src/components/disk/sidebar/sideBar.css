@@ -1,0 +1,57 @@
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: #121211;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #3a3939;
+    border-right: 1px solid #3a3939;
+
+}
+
+.home {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+nav ul li:hover,
+.active {
+    background: #222;
+    border-radius: 5px;
+}
+
+.quick-access {
+    margin-top: auto;
+}
+
+.quick-access h4 {
+    margin-bottom: 10px;
+}
+
+.quick-access button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.quick-access button:hover {
+    background: #444;
+}

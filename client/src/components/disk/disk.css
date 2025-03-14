@@ -1,9 +1,23 @@
-
 .disk {
-    margin-top: 20px;
 }
+
 .disk__btns {
     display: flex;
+}
+
+.disk__upload-label {
+    background-color: #f8f5f2;
+    border-radius: 12px;
+    /*margin-left: 20px;*/
+    height: 75px;
+    width: 140px;
+
+    font-size: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-bottom: 12px;
 }
 
 .disk__create {
@@ -11,18 +25,21 @@
     color: white;
     border: 1px solid #3a3939;
     border-radius: 12px;
-    padding: 5px 20px;
-    margin-left: 10px;
-    height: 80px;
-    line-height: 80px;
-    display: inline-block;
-    font-size: 16px;
-    text-align: center;
+    margin-left: 15px;
+    height: 75px;
+    width: 140px;
+
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-bottom: 12px;
+
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
-/* Hover effect */
 .disk__create:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -31,22 +48,92 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-
-
 .disk__back {
     background-color: transparent;
     color: white;
     border: 1px solid #3a3939;
     border-radius: 12px;
-    padding: 5px 20px;
-    margin-left: 10px;
-    height: 80px;
-    line-height: 80px;
-    display: inline-block;
-    font-size: 16px;
-    text-align: center;
+    margin-left: 15px;
+    height: 75px;
+    width: 140px;
+
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-bottom: 12px;
+
     cursor: pointer;
     transition: 0.3s ease-in-out;
+}
+
+.disk__suggest {
+    margin-top: 20px;
+    color: white;
+    /*margin-left: 305px;*/
+    font-size: 15px;
+}
+
+.disk__all_files {
+    margin-top: 260px;
+    color: white;
+    /*margin-left: 305px;*/
+    font-size: 25px;
+}
+
+.file__sort__btns {
+    margin-top: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.disk__recents:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.disk__starred:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.disk__recents {
+    background-color: #313030;
+    color: white;
+    /*margin-left: 300px;*/
+
+
+    border: 1px solid #313030;
+    height: 30px;
+    width: 110px;
+    border-radius: 20px;
+}
+
+.disk__starred {
+    background-color: #313030;
+    color: white;
+    margin-left: 10px;
+
+
+    border: 1px solid #313030;
+    border-radius: 20px;
+    height: 30px;
+    width: 110px;
+}
+
+
+
+.disk__select {
+    background-color: #f8f5f2;
+    border-radius: 12px;
+    margin-left: 15px;
+    height: 80px;
+    width: 140px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 12px;
+    padding-bottom: 12px;
 }
 
 .popup {
@@ -62,6 +149,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .popup__content {
     width: 400px;
     background: white;
@@ -70,13 +158,16 @@
     display: flex;
     flex-direction: column;
 }
+
 .popup__create {
     align-self: flex-end;
 }
+
 .popup__header {
     display: flex;
     justify-content: space-between;
 }
+
 .popup input {
     margin: 20px 0px;
 }
@@ -84,17 +175,7 @@
 .disk__upload-input {
     display: none;
 }
-.disk__upload-label {
-    background-color: #f8f5f2;
-    border-radius: 12px;
-    padding: 5px 10px;
-    margin-left: 10px;
-    height: 80px;
-    line-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .drop-area {
     width: 100vw;
@@ -111,6 +192,3 @@
     box-sizing: border-box;
     border-radius: 40px;
 }
-
-
-/*# sourceMappingURL=disk.css.map */

@@ -1,29 +1,61 @@
-
 .filelist {
     margin: 20px 0;
 }
+
 .filelist__header {
     display: grid;
     grid-template-columns: 1fr 4fr repeat(4, 1fr);
+    padding: 5px 0;
+    border-bottom: solid 1px #3a3939;
 }
+
 .filelist__name {
-    grid-column-start: 2;
+    grid-column-start: 1;
     color: white;
 }
+
+
 .filelist__date {
+    grid-column-start: 4;
+    justify-self: center;
+    color: white;
+}
+
+.filelist__size {
     grid-column-start: 5;
     justify-self: center;
     color: white;
 }
-/*.filelist__size {*/
-/*    grid-column-start: 6;*/
-/*    justify-self: center;*/
-/*    color: white;*/
-/*}*/
 
 .filelist__access {
     grid-column-start: 6;
     justify-self: center;
     color: white;
 }
-/*# sourceMappingURL=fileList.css.map */
+
+.filelist__empty {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*/* Animation for file entry */*/
+.file-enter {
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+.file-enter-active {
+    animation: file-enter 500ms forwards;
+}
+
+@keyframes file-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

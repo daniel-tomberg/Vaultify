@@ -12,10 +12,11 @@ const Disk = () => {
     const currentDir = useSelector(state => state.files.currentDir)
     const dirStack = useSelector(state => state.files.dirStack)
     const [dragEnter, setDragEnter] = useState(false);
+    const [sort, setSort] = useState('type')
 
     useEffect(() => {
-        dispatch(getFiles(currentDir))
-    }, [currentDir, dispatch])
+        dispatch(getFiles(currentDir, sort))
+    }, [currentDir, sort, dispatch])
 
     function showPopupHandler() {
         dispatch(setPopupDisplay('flex'))
@@ -60,10 +61,26 @@ const Disk = () => {
                         <input multiple={true} onChange={(event) => fileUploadHandler(event)} type="file"
                                id="disk__upload-input" className="disk__upload-input"/>
                     </div>
+                    <button className="disk__create" onClick={() => showPopupHandler()}>Create</button>
+                    <button className="disk__create">Get the app</button>
+                    <button className="disk__create">Transfer a copy</button>
+                    <button className="disk__create">Share</button>
+                    <select value={sort}
+                            onChange={(e) => setSort(e.target.value)}
+                            className='disk__select'>
+                        <option value="name">By name</option>
+                        <option value="type">By type</option>
+                        <option value="date">By date</option>
+                    </select>
                     <button className="disk__back" onClick={() => backClickHandler()}>Back</button>
-                    <button className="disk__create" onClick={() => showPopupHandler()}>Create folder</button>
                 </div>
-                <div style={{height: '500px'}}></div>
+                <div className="disk__suggest">Suggested for you</div>
+                <div className="disk__all_files">All files</div>
+                <div className="file__sort__btns">
+                    <button className="disk__recents">Recent</button>
+                    <button className="disk__starred">Starred</button>
+                </div>
+                {/*<div style={{height: '500px'}}></div>*/}
                 <FileList/>
                 <Popup/>
                 <Uploader/>

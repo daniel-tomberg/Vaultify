@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr repeat(4, 1fr);
     align-items: center;
+    transition: transform 0.2s ease-in-out;
 }
 
 .filelist__empty {
@@ -15,31 +16,31 @@
 .file:hover {
     transform: scale(1.02);
 }
+
 .file__img {
     justify-self: center;
 }
 
-.file__name {
-    color: white;
-}
-.file__date {
-    grid-column-start: 5;
-    justify-self: center;
-    color: white;
-}
-.file__size {
-    grid-column-start: 6;
-    justify-self: center;
+.file__name,
+.file__date,
+.file__size,
+.file__access {
     color: white;
 }
 
-.file:hover .file__download {
-    grid-column-start: 5;
-    display: block;
+.file__date {
+    grid-column: 4;
+    justify-self: center;
 }
-.file:hover .file__delete {
-    grid-column-start: 6;
-    display: block;
+
+.file__size {
+    grid-column: 5;
+    justify-self: center;
+}
+
+.file__access {
+    grid-column: 6;
+    justify-self: center;
 }
 
 .file__btn {
@@ -47,15 +48,16 @@
 }
 
 .file:hover .file__download {
-    grid-column-start: 4;
+    grid-column: 4;
     display: block;
 }
+
 .file:hover .file__delete {
-    grid-column-start: 5;
+    grid-column: 5;
     display: block;
 }
+
 .file:hover .file__share {
-    grid-column-start: 6;
+    grid-column: 6;
     display: block;
 }
-/*# sourceMappingURL=file.css.map */

@@ -1,10 +1,10 @@
 .navbar {
     display: flex;
-    height: 50px;
+    height: 60px;
     justify-content: center;
-    background-color: #121211;
+    background-color: transparent;
     width: 100%;
-    border-bottom: 1px #333333 solid;
+    /*border-bottom: 1px #333333 solid;*/
 }
 
 .navbar__login {
@@ -23,6 +23,27 @@
     width: 1140px;
     display: flex;
     align-items: center;
+}
+
+.navbar__search {
+    margin-top: 20px;
+    background-color: transparent;
+    color: #bbb5ae;
+    border: 1px solid #3a3939;
+    border-radius: 12px;
+    margin-left: 50px;
+    height: 50px;
+    width: 580px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-bottom: 14px;
+
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=navbar.css.map */

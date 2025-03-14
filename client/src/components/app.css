@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'SharpGrotesk Book20';
+    src: url('../assets/fonts/SharpGrotesk-Book20.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'SharpGrotesk Book20'
 }
+
 body {
     background-color: #1a1817;
 }
@@ -15,5 +23,79 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.preSidebar {
+    width: 100px;
+    height: 100vh;
+    background: #121211;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    position: fixed;
+    left: 70px;
+    top: 0;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.wrap {
+    flex-grow: 1;
+    margin-left: 350px;
+    padding: 20px;
+    width: calc(100% - 350px);
+}
+
+.block1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #121211;
+    z-index: 1000;
+}
+
+
+
+.line1 {
+    position: fixed;
+    left: 70px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #333333;
+    z-index: 1000;
+}
+
+.line2 {
+    position: fixed;
+    left: 300px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #333333;
+    z-index: 1000;
+}
+
 
 /*# sourceMappingURL=app.css.map */

@@ -7,6 +7,8 @@ import Login from "./authorization/Login";
 import {useDispatch, useSelector} from "react-redux";
 import {auth} from "../actions/user";
 import Disk from "./disk/Disk";
+import Sidebar from "./disk/sidebar/SideBar";
+import PreSidebar from "./disk/sidebar/PreSidebar";
 
 function App() {
     const isAuth = useSelector(state => state.user.isAuth)
@@ -20,6 +22,8 @@ function App() {
         <BrowserRouter>
             <div className='app'>
                 <Navbar/>
+                <PreSidebar/>
+                <Sidebar/>
                 <div className="wrap">
                     {!isAuth ?
                         <Switch>
