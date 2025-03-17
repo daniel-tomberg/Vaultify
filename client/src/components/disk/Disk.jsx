@@ -6,10 +6,13 @@ import './disk.css'
 import Popup from "./Popup";
 import {setCurrentDir, setPopupDisplay} from "../../reducers/fileReducer";
 import Uploader from "./uploader/Uploader";
+import PreSidebar from "./sidebar/PreSidebar";
+import Sidebar from "./sidebar/SideBar";
 
 const Disk = () => {
     const dispatch = useDispatch()
     const currentDir = useSelector(state => state.files.currentDir)
+    const loader = useSelector(state => state.app.loader)
     const dirStack = useSelector(state => state.files.dirStack)
     const [dragEnter, setDragEnter] = useState(false);
     const [sort, setSort] = useState('type')
@@ -52,9 +55,19 @@ const Disk = () => {
         setDragEnter(false)
     }
 
+    if(loader) {
+        return (
+        <div className="loader">
+            <span className="lds-dual-ring"></span>
+        </div>
+        )
+    }
+
     return (!dragEnter ?
             <div className="disk" onDragEnter={dragEnterHandler} onDragLeave={dragLeaveHandler}
                  onDragOver={dragEnterHandler}>
+                <PreSidebar/>
+                <Sidebar/>
                 <div className="disk__btns">
                     <div className="disk__upload">
                         <label htmlFor="disk__upload-input" className="disk__upload-label">Upload or drop</label>

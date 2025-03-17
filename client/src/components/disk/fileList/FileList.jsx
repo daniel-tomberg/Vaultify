@@ -7,6 +7,10 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const FileList = () => {
     const files = useSelector(state => Array.isArray(state.files?.files) ? state.files.files : []);
 
+    if(files.length === 0){
+        return null;
+    }
+
     return (
         <div className='filelist'>
             <div className="filelist__header">

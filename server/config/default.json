@@ -2,5 +2,5 @@
   "serverPort" : 5003,
   "dbUrl": "mongodb+srv://tommberg:LYJS5w0X07gPZJfR@cloud.obqrc.mongodb.net/?retryWrites=true&w=majority&appName=cloud",
   "secretKey": "vaultify-secret-key",
-  "filePath": "/YOUR_PATH"
+  "filePath": "/Users/danieltomberg/WebstormProjects/Projects/FullStack/Vaultify/server/files"
 }
